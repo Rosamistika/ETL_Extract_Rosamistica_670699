@@ -73,3 +73,17 @@ In this mode, the entire dataset is pulled regardless of whether it was changed 
 ```python
 df = pd.read_csv("user_activity_logs.csv", parse_dates=["last_updated"])
 print(f"Pulled {len(df)} rows via full extraction.")
+## Lab 5: Load
+
+In this final stage of the ETL pipeline, we loaded the transformed datasets into a structured format using SQLite.
+
+### Loading Method
+- Used Python `sqlite3` to write CSVs into local `.db` files
+
+### Output Files
+- `loaded_data/full_data.db` (table: `full_data`)
+- `loaded_data/incremental_data.db` (table: `incremental_data`)
+
+### Sample SQL Query for Verification
+```sql
+SELECT * FROM full_data LIMIT 5;

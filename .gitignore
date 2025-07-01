@@ -1,5 +1,16 @@
 .ipynb_checkpoints/
-__pycache__/
 *.log
+*.db
+*.parquet
+loaded_data/
+
 *.sqlite
+.ipynb_checkpoints/
+__pycache__/
 last_extraction.txt
+transformed_full.csv
+transformed_incremental.csv
+# Ignore Python cache files
+*.pyc
+# Ignore Jupyter Notebook checkpoints
+# Ignore virtual environment directories
